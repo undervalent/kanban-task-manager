@@ -1,0 +1,68 @@
+.button {
+  all: unset;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--bold);
+  color: #fff;
+  min-width: 16rem;
+  width: content;
+  padding: 0 var(--size4); 
+}
+.button:hover {
+  cursor: pointer;
+}
+.button:disabled {
+  border-color: transparent;
+  cursor: not-allowed;
+  background-image: none;
+  pointer-events: none;
+  opacity:var(--opacity50);
+}
+.button svg {
+  width: var(--size6);
+  height: var(--size6);
+  margin-left: var(--ten);
+}
+
+.secondary {
+  color: var(--borderActive);
+  background: var(--secondary);
+}
+.secondary:hover {
+  background: var(--secondaryHover);
+}
+.secondary:focus {
+  background: var(--secondaryHover);
+}
+.destructive {
+  background: var(--destructiveBackground);
+}
+.destructive:hover {
+  background: var(--destructiveBackgroundHover);
+}
+.destructive:focus {
+  background: var(--destructiveBackgroundHover);
+}
+
+.primary {
+  background: var(--buttonSolid);
+}
+
+.primary:hover {
+  background: var(--buttonSolidHover);
+}
+.primary:focus {
+  background: var(--buttonSolidHover);
+}
+
+.sm {
+  font-size: var(--fontSize1);
+  height : var(--size10);
+  border-radius: var(--small);
+}
+.lg {
+  font-size: var(--fontSize3);
+  height: var(--size12);
+  border-radius: var(--large);
+}

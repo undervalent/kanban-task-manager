@@ -1,7 +1,13 @@
 {
   "boards": [
     {
+      "name": "Empty one",
+      "id": "0e82bcab-ae08-45ec-a4b8-870a5b64f3c8",
+      "columns": []
+    },
+    {
       "name": "Platform Launch",
+      "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f3c8",
       "columns": [
         {
           "name": "Todo",
@@ -285,6 +291,7 @@
     },
     {
       "name": "Marketing Plan",
+      "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f3c9",
       "columns": [
         {
           "name": "Todo",
@@ -376,6 +383,7 @@
     },
     {
       "name": "Roadmap",
+      "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f3d9",
       "columns": [
         {
           "name": "Now",

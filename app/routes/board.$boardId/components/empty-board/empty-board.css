@@ -1,0 +1,11 @@
+.empty-board {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size8);
+  align-items: center;
+}
+.empty-board__headline {
+  font-size: var(--fontSize4);
+  font-weight: var(--bold);
+  color: var(--hightContrastText)
+}

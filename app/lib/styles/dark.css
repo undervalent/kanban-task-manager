@@ -1,0 +1,10 @@
+html {
+  --text: hsla(0, 0%, 100%, 1);
+  --background: hsla(235, 16%, 15%, 1);
+  --backgroundApp: hsla(235, 12%, 19%, 1);
+  --backgroundUiElement: hsla(235, 16%, 15%, 1);
+  --backgroundUiElementHover: hsla(242, 48%, 58%, 1);
+  --textLowContrast: hsla(0, 0%, 100%, 0.25);
+  --buttonSecondaryBackground: hsla(0, 0%, 100%, 1);
+  --buttonSecondaryBackgroundHover: hsla(0, 0%, 100%, 1);
+}

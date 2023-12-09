@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans:wght@400;700&family=Quattrocento:wght@400;700&display=swap");
-
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
 :root {
   /* Spacing Variables */
   --none: 0;
@@ -44,71 +43,33 @@
   --xxlg: 1920px;
 
   /* Color Variables */
-  --background: #151718;
-  --backgroundBody: #0c0c0c;
-  --backgroundSecondary: #242424;
-  --primaryBody: #d9d9d9;
-  --white: #fff;
-  --highlight: #FF801F;
-  --hover: #A35829;
-  --backgroundApp: hsl(200, 7.0%, 8.8%);
-  --backgroundSubtle: hsl(195, 7.1%, 11.0%);
-  --backgroundSolid: hsl(206, 6.0%, 43.9%);
-  --backgroundSolidHover: hsl(206, 5.2%, 49.5%);
-  --backgroundUiElement: hsl(197, 6.8%, 13.6%);
-  --backgroundUiElementHover: hsl(198, 6.6%, 15.8%);
-  --active: hsl(199, 6.4%, 17.9%);
-  --border: hsl(203, 6.0%, 24.3%);
-  --borderSubtle: hsl(201, 6.2%, 20.5%);
-  --borderHover: hsl(207, 5.6%, 31.6%);
-  --textLowContrast: hsl(206, 6.0%, 63.0%);
-  --textHighContrast: hsl(210, 6.0%, 93.0%);
-  --textDark: hsl(210, 6.0%, 93.0%);
-  --successBackground: hsl(170, 76.1%, 9.2%);
-  --successBackgroundHover: hsl(171, 75.8%, 11.0%);
-  --successText: hsl(174, 90.0%, 40.7%);
-  --successBorder: hsl(172, 76.7%, 18.6%);
-  --warningBackground: hsl(32, 100%, 10.2%);
-  --warningBackgroundHover: hsl(32, 100%, 12.4%);
-  --warningText: hsl(39, 90.0%, 49.8%);
-  --warningBorder: hsl(35, 91.0%, 21.6%);
-  --infoBackground: hsl(228, 43.3%, 17.5%);
-  --infoBackgroundHover: hsl(227, 47.2%, 21.0%);
-  --infoText: hsl(228, 100%, 75.9%);
-  --infoBorder: hsl(226, 56.0%, 34.5%);
-  --errorBackground: hsl(335, 42.5%, 16.5%);
-  --errorBackgroundHover: hsl(335, 47.2%, 19.3%);
-  --errorText: hsl(341, 90.0%, 67.3%);
-  --errorBorder: hsl(336, 62.9%, 30.8%);
-  --buttonSubtle: hsl(192, 71.4%, 8.2%);
-  --buttonBackground: hsl(192, 60.0%, 7.2%);
-  --buttonBackgroundHover: hsl(192, 79.3%, 12.8%);
-  --buttonSolid: hsl(190, 95.0%, 39.0%);
-  --buttonSolidHover: hsl(188, 100%, 40.0%);
-  --buttonText: hsl(186, 100%, 42.2%);
-  --buttonBorder: hsl(192, 92.6%, 20.1%);
+  --border: hsla(216, 15%, 57%, 0.25);
+  --borderActive: hsla(242, 48%, 58%, 1);
+  --secondary: rgba(99, 95, 199, 0.10);
+  --secondaryHover: hsla(242, 48%, 58%, 0.25);
+  --destructiveBackground: hsla(0, 78%, 63%, 1);
+  --destructiveBackgroundHover: hsla(0, 100%, 80%, 1);
+  --destructiveText: hsla(0, 78%, 63%, 1);
+  --destructiveBorder: hsla(0, 78%, 63%, 1);
+  --buttonSolid: hsla(242, 48%, 58%, 1);
+  --buttonSolidHover: hsla(242, 100%, 82%, 1);
+  --buttonText: hsla(0, 0%, 100%, 1);
+  --hightContrastText: hsla(216, 15%, 57%, 1);
+  --navLinkText: hsla(216, 15%, 57%, 1);
+  --navLinkTextHover: #fff;
   /* Font Weight Variables */
-  --regular: 400;
-  --demi: 500;
+  --regular: 500;
   --bold: 700;
 
   /* Font Variables */
-  --headings: 'Quattrocento', serif;
-  --fontFamily: 'Quattrocento Sans', sans-serif;
+  --font-family: 'Plus Jakarta Sans', sans-serif;
 
   /* Font Size Variables */
-  --fontSize1: 1.4rem;
-  --fontSize2: 1.6rem;
-  --fontSize3: 1.8rem;
-  --fontSize4: 2rem;
+  --fontSize1: 1.2rem;
+  --fontSize2: 1.3rem;
+  --fontSize3: 1.5rem;
+  --fontSize4: 1.8rem;
   --fontSize5: 2.4rem;
-  --fontSize6: 2.8rem;
-  --fontSize7: 3.4rem;
-  --fontSize8: 4rem;
-  --fontSize9: 4.8rem;
-  --fontSize10: 6rem;
-  --fontSize11: 7.2rem;
-  --fontSize12: 8.4rem;
 
   /* Letter Spacing Variables */
   --dense: -.25rem;
@@ -117,21 +78,10 @@
   --double: .2rem;
 
   /* Line Height Variables */
-  --lineHeight1: 1.6rem;
-  --lineHeight2: 2rem;
-  --lineHeight3: 2.4rem;
-  --lineHeight4: 2.8rem;
-  --lineHeight5: 3.2rem;
-  --lineHeight6: 3.6rem;
-  --lineHeight7: 4.4rem;
-  --lineHeight8: 5.2rem;
-  --lineHeight9: 6rem;
-  --lineHeight10: 7.6rem;
-  --lineHeight11: 9.2rem;
-  --lineHeight12: 10.8rem;
-  --lineHeightMultiplierSmall: 1.3;
-  --lineHeightMultiplierMedium: 1.5;
-  --lineHeightMultiplierLarge: 2;
+  --lineHeight1: 1.5rem;
+  --lineHeight2: 1.9rem;
+  --lineHeight3: 2.3rem;
+  --lineHeight4: 3rem;
 
   /* Curve Variables */
   --linear: cubic-bezier(0, 0, 1, 1);
@@ -178,10 +128,10 @@
   --defaultRadius: 0.4rem;
   --noneRadius: 0;
   --xSmall: 0.2rem;
-  --small: 0.4rem;
+  --small: 2rem;
   --medium: 0.6rem;
-  --large: 0.8rem;
-  --xLarge: 1.2rem;
+  --large: 2.4rem;
+  --xLarge: 10rem;
   --circle: 50%;
   --pill: 9999rem;
 
@@ -217,10 +167,8 @@ html {
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
   font-size: 62.5%;
-  font-family: var(--fontFamily);
+  font-family: var(--font-family);
   box-sizing: border-box;
-  background-color: var(--background);
-  color: var(--white)
 }
 *,
 *:before,
@@ -228,11 +176,12 @@ html {
   box-sizing: inherit;
 }
 body {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   margin: 0;
   padding: 0;
   display: flex;
   flex-direction: column;
+  font-weight: var(--regular)
 }
 html,
 body {
@@ -657,6 +606,21 @@ template {
 [hidden] {
   display: none;
 }
+
+
+html {
+  --background: hsla(220, 69%, 97%,1);
+  --backgroundApp: hsla(0, 0%, 100%, 1);
+  --text: hsla(237, 100%, 4%, 1);
+  --backgroundUiElement: hsla(220, 69%, 97%, 1);
+  --backgroundUiElementHover: hsla(242, 48%, 58%, 1);
+  --textLowContrast: hsla(237, 100%, 4%, 1);
+  --buttonSecondaryBackground: hsla(242, 48%, 58%, 0.1);
+  --buttonSecondaryBackgroundHover: hsla(242, 48%, 58%, 0.25);
+  --buttonSecondaryText: hsla(242, 48%, 58%, 1);
+  background: var(--background);
+  color: var(--text);
+}
 /* Hiding class, making content visible only to screen readers but not visually */
 .visually-hidden:not(:focus):not(:active) {
   clip: rect(0 0 0 0);
@@ -724,7 +688,7 @@ h6 {
   padding: 0;
   margin: 0;
   color: var(--lightAlpha);
-  font-family: var(--headings);
+  font-weight: var(--bold)
 }
 p,
 ul,
@@ -739,9 +703,94 @@ li {
   width: 100%
 }
 
-p {
-  font-size: clamp(var(--fontSize3), var(--fontSize4) ,var(--fontSize5) );
-  line-height: var(--lineHeightMultiplierLarge);
-  max-width: 65ch;
+.heading-s {
+  font-size: var(--fontSize1);
+  font-weight: var(--bold);
+  letter-spacing: .24rem;
+  color: var(--hightContrastText)
 }
 
+.heading-m {
+  font-size: var(--fontSize3);
+  font-weight: var(--bold);
+}
+
+.heading-l {
+  font-size: var(--fontSize4);
+  font-weight: var(--bold);
+}
+.heading-xl {
+  font-size: var(--fontSize5);
+  font-weight: var(--bold);
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: minmax(30rem, 0) 1fr;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background: var(--backgroundApp);
+  border-right: 1px solid var(--border);
+  height: 100%;
+}
+.sidebar__navigation {
+  flex-grow:1;
+}
+.sidebar-control {
+
+}
+
+.logo {
+  margin-bottom: var(--size13);
+}
+
+.logo__heading {
+  display: flex;
+  gap: var(--size4);
+  align-items: center;
+  padding: var(--size8) 0 0 var(--size8);
+}
+
+.logo__link {
+  color: var(--text);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.navigation-list {
+  margin-top: var(--size5);
+}
+
+.navigation-link {
+  display: flex;
+  align-items: center;
+  padding-left: var(--size8);
+  gap: var(--size4);
+  border-radius: 0 var(--xLarge) var(--xLarge) 0;
+  max-width: 27.6rem;
+  height: 4.9rem;
+  flex-shrink: 0;
+  color: var(--navLinkText);
+  text-decoration: none;
+  font-weight: var(--bold);
+  font-size: var(--fontSize3);
+
+  & > svg {
+    fill: white !important;
+  }
+
+  &:hover {
+    color: var(--text);
+  }
+  &.active {
+    background: var(--buttonSolid);
+    color: var(--navLinkTextHover);
+  }
+}
