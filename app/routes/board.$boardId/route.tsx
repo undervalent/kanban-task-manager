@@ -1,32 +1,36 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import { json } from "@remix-run/node";
 import type { LinksFunction, DataFunctionArgs } from "@remix-run/node";
-import db from '~/lib/data/data.json';
+import db from "~/lib/data/data.json";
 import { useLoaderData } from "@remix-run/react";
 import { invariantResponse } from "~/utils";
-import boardStylesUrl from './board.css'
+import boardStylesUrl from "./board.css";
 import { EmptyBoard, links as emptyBoardLinks } from "./components/empty-board";
 import { Button } from "~/components/button";
+import {
+  KanBanBoard,
+  links as kanbanBoardLinks,
+} from "./components/kanban-board";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: boardStylesUrl },
   ...emptyBoardLinks(),
+  ...kanbanBoardLinks(),
 ];
 export async function loader({ params }: DataFunctionArgs) {
   const { boardId } = params;
 
   const board = db.boards.find((board) => board.id === boardId);
-  invariantResponse(board, 'Board not found')
+  invariantResponse(board, "Board not found");
 
-  return json({ board })
+  return json({ board });
 }
 
 function usePageData(data: any) {
-  console.log('USE PAGTE -->', data)
+  console.log("USE PAGTE -->", data);
 
-  return [
-    { hasColumn: data?.board?.columns?.length }
-  ]
+  return [{ hasColumn: data?.board?.columns?.length }];
 }
 
 export default function Board() {
@@ -40,7 +44,8 @@ export default function Board() {
         <Button>+ Add New Task</Button>
       </header>
       <article className="content">
-        {hasColumn ? <div>HAS COLUMN</div> : <EmptyBoard />}
+        {hasColumn ? <KanBanBoard /> : <EmptyBoard />}
       </article>
-    </section>)
+    </section>
+  );
 }
