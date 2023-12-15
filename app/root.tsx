@@ -1,6 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import { json } from "@remix-run/node"
-import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
+import type { LinksFunction } from "@remix-run/node";
 import globalStyles from '~/lib/styles/global.css'
 import darkStyles from '~/lib/styles/dark.css'
 import { links as buttonLinks } from "./components/button";

@@ -29,11 +29,7 @@ const board = await prisma.board.findUnique({
       include: {
         task: {
           include: {
-                subTask: {
-                  where: {
-                    isCompleted: true
-              }
-            }
+                subTask: true
           }
         }
       }
