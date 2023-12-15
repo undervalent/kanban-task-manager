@@ -1,7 +1,6 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import { json } from "@remix-run/node";
 import type { LinksFunction, DataFunctionArgs } from "@remix-run/node";
-import db from "~/lib/data/data.json";
 import { useLoaderData } from "@remix-run/react";
 import { invariantResponse } from "~/utils";
 import boardStylesUrl from "./board.css";
@@ -12,6 +11,8 @@ import {
   links as kanbanBoardLinks,
 } from "./components/kanban-board";
 
+import prisma from "prisma/client";
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: boardStylesUrl },
@@ -21,30 +22,39 @@ export const links: LinksFunction = () => [
 export async function loader({ params }: DataFunctionArgs) {
   const { boardId } = params;
 
-  const board = db.boards.find((board) => board.id === boardId);
+const board = await prisma.board.findUnique({
+  where: { id: boardId },
+  include: {
+    columns: {
+      include: {
+        task: {
+          include: {
+                subTask: {
+                  where: {
+                    isCompleted: true
+              }
+            }
+          }
+        }
+      }
+    },
+  }
+})
   invariantResponse(board, "Board not found");
-
-  return json({ board });
+  return json({ board, hasColumn: Boolean(board?.columns?.length) })
 }
 
-function usePageData(data: any) {
-  console.log("USE PAGTE -->", data);
-
-  return [{ hasColumn: data?.board?.columns?.length }];
-}
 
 export default function Board() {
-  const data = useLoaderData<typeof loader>();
-  const [{ hasColumn }] = usePageData(data);
-
+  const { board, hasColumn } = useLoaderData<typeof loader>();
   return (
     <section>
       <header className="main-header">
-        <h2>{data.board?.name}</h2>
+        <h2>{board?.name}</h2>
         <Button>+ Add New Task</Button>
       </header>
       <article className="content">
-        {hasColumn ? <KanBanBoard /> : <EmptyBoard />}
+        {hasColumn ? <KanBanBoard board={board} /> : <EmptyBoard />}
       </article>
     </section>
   );

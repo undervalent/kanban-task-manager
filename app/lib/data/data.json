@@ -11,11 +11,13 @@
       "columns": [
         {
           "name": "Todo",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
           "tasks": [
             {
               "title": "Build UI for onboarding flow",
               "description": "",
               "status": "Todo",
+          "id": "1e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Sign up page",
@@ -35,6 +37,7 @@
               "title": "Build UI for search",
               "description": "",
               "status": "Todo",
+          "id": "2e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Search page",
@@ -46,6 +49,7 @@
               "title": "Build settings UI",
               "description": "",
               "status": "Todo",
+          "id": "3e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Account page",
@@ -61,6 +65,7 @@
               "title": "QA and test all major user journeys",
               "description": "Once we feel version one is ready, we need to rigorously test it both internally and externally to identify any major gaps.",
               "status": "Todo",
+          "id": "4e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Internal testing",
@@ -76,11 +81,13 @@
         },
         {
           "name": "Doing",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f5c8",
           "tasks": [
             {
               "title": "Design settings and search pages",
               "description": "",
               "status": "Doing",
+          "id": "5e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Settings - Account page",
@@ -100,6 +107,7 @@
               "title": "Add account management endpoints",
               "description": "",
               "status": "Doing",
+          "id": "6e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Upgrade plan",
@@ -119,6 +127,7 @@
               "title": "Design onboarding flow",
               "description": "",
               "status": "Doing",
+          "id": "7e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Sign up page",
@@ -135,9 +144,10 @@
               ]
             },
             {
-              "title": "Add search enpoints",
+              "title": "Add search endpoints",
               "description": "",
               "status": "Doing",
+          "id": "8e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Add search endpoint",
@@ -153,6 +163,7 @@
               "title": "Add authentication endpoints",
               "description": "",
               "status": "Doing",
+          "id": "9e82bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Define user model",
@@ -168,6 +179,7 @@
               "title": "Research pricing points of various competitors and trial different business models",
               "description": "We know what we're planning to build for version one. Now we need to finalise the first pricing model we'll use. Keep iterating the subtasks until we have a coherent proposition.",
               "status": "Doing",
+          "id": "0e83bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Research competitor pricing and business models",
@@ -187,11 +199,13 @@
         },
         {
           "name": "Done",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f6c8",
           "tasks": [
             {
               "title": "Conduct 5 wireframe tests",
               "description": "Ensure the layout continues to make sense and we have strong buy-in from potential users.",
               "status": "Done",
+          "id": "0e84bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Complete 5 wireframe prototype tests",
@@ -203,6 +217,7 @@
               "title": "Create wireframe prototype",
               "description": "Create a greyscale clickable wireframe prototype to test our asssumptions so far.",
               "status": "Done",
+          "id": "0e85bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Create clickable wireframe prototype in Balsamiq",
@@ -214,6 +229,7 @@
               "title": "Review results of usability tests and iterate",
               "description": "Keep iterating through the subtasks until we're clear on the core concepts for the app.",
               "status": "Done",
+          "id": "0e86bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Meet to review notes from previous tests and plan changes",
@@ -233,6 +249,7 @@
               "title": "Create paper prototypes and conduct 10 usability tests with potential customers",
               "description": "",
               "status": "Done",
+          "id": "0e87bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Create paper prototypes for version one",
@@ -248,6 +265,7 @@
               "title": "Market discovery",
               "description": "We need to define and refine our core product. Interviews will help us learn common pain points and help us define the strongest MVP.",
               "status": "Done",
+          "id": "0e88bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Interview 10 prospective customers",
@@ -259,6 +277,7 @@
               "title": "Competitor analysis",
               "description": "",
               "status": "Done",
+          "id": "0e89bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Find direct and indirect competitors",
@@ -274,6 +293,7 @@
               "title": "Research the market",
               "description": "We need to get a solid overview of the market to ensure we have up-to-date estimates of market size and demand.",
               "status": "Done",
+          "id": "0e80bcab-ae08-45ec-a4b8-770a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Write up research analysis",
@@ -295,11 +315,13 @@
       "columns": [
         {
           "name": "Todo",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f7c8",
           "tasks": [
             {
               "title": "Plan Product Hunt launch",
               "description": "",
               "status": "Todo",
+          "id": "0e82bcab-ae08-45ec-a4b8-771a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Find hunter",
@@ -331,6 +353,7 @@
               "title": "Share on Show HN",
               "description": "",
               "status": "",
+          "id": "0e82bcab-ae08-45ec-a4b8-772a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Draft out HN post",
@@ -350,6 +373,7 @@
               "title": "Write launch article to publish on multiple channels",
               "description": "",
               "status": "",
+          "id": "0e82bcab-ae08-45ec-a4b8-773a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Write article",
@@ -373,10 +397,12 @@
         },
         {
           "name": "Doing",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f8c8",
           "tasks": []
         },
         {
           "name": "Done",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f9c8",
           "tasks": []
         }
       ]
@@ -387,11 +413,13 @@
       "columns": [
         {
           "name": "Now",
+          "id": "0e82bcab-ae08-45ec-a4b8-770a5b64f0c8",
           "tasks": [
             {
               "title": "Launch version one",
               "description": "",
               "status": "",
+          "id": "0e82bcab-ae08-45ec-a4b8-775a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Launch privately to our waitlist",
@@ -407,6 +435,7 @@
               "title": "Review early feedback and plan next steps for roadmap",
               "description": "Beyond the initial launch, we're keeping the initial roadmap completely empty. This meeting will help us plan out our next steps based on actual customer feedback.",
               "status": "",
+          "id": "0e82bcab-ae08-45ec-a4b8-776a5b64f4c8",
               "subtasks": [
                 {
                   "title": "Interview 10 customers",
@@ -426,10 +455,12 @@
         },
         {
           "name": "Next",
+          "id": "0e82bcab-ae08-46ec-a4b8-770a5b64f3c8",
           "tasks": []
         },
         {
           "name": "Later",
+          "id": "0e82bcab-ae08-47ec-a4b8-770a5b64f3c8",
           "tasks": []
         }
       ]

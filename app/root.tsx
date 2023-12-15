@@ -1,5 +1,5 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
-import { json} from "@remix-run/node";
+import { json } from "@remix-run/node"
 import type { DataFunctionArgs, LinksFunction } from "@remix-run/node";
 import globalStyles from '~/lib/styles/global.css'
 import darkStyles from '~/lib/styles/dark.css'
@@ -15,9 +15,9 @@ import {
   useLoaderData,
   NavLink
 } from "@remix-run/react";
-import db from '~/lib/data/data.json'
 import Logo from '~/lib/assets/images/logo.svg'
 import IconBoard from '~/lib/assets/images/icon-board.svg'
+import prisma from "prisma/client";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -26,12 +26,10 @@ export const links: LinksFunction = () => [
   ...buttonLinks(),
 ];
 
-export async function loader({ params }: DataFunctionArgs) {
-  const { boardId } = params;
-  const boards = db?.boards;
-  const activeBoard = db.boards.find((board) => board.id === boardId);
+export async function loader() {
+  const boards = await prisma.board.findMany({});
 
-  return json({ boards, activeBoard });
+  return json({ boards });
 }
 
 export default function App() {
