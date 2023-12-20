@@ -618,6 +618,7 @@ html {
   --buttonSecondaryBackground: hsla(242, 48%, 58%, 0.1);
   --buttonSecondaryBackgroundHover: hsla(242, 48%, 58%, 0.25);
   --buttonSecondaryText: hsla(242, 48%, 58%, 1);
+  --grayText: hsla(216, 15%, 57%, 1);
   background: var(--background);
   color: var(--text);
 }

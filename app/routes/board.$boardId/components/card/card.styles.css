@@ -1,3 +1,5 @@
+.container {
+}
 .card {
   display: flex;
   justify-content: center;
@@ -9,6 +11,14 @@
   border-radius: var(--medium);
   background: var(--backgroundApp);
   box-shadow: 0px 4px 6px 0px rgba(54, 78, 126, 0.1);
+  text-decoration: none;
+  &:hover {
+    box-shadow: 0px 4px 6px 0px rgba(54, 78, 126, 0.5);
+  }
+  &:active {
+  color: var(--text);
+  }
+
 }
 .card__title {
   font-size: var(--fontSize3);

@@ -1,0 +1,38 @@
+.checkbox__container {
+  display: flex;
+  width: 100%;
+  padding: 1.3rem 1.6rem;
+  align-items: center;
+  background-color: var(--backgroundUiElement);
+  gap: 1rem;
+}
+
+.checkbox {
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 2px 10px var(--black-a7); */
+}
+.checkbox:hover {
+  background-color: var(--backgroundUiElementHover);
+}
+.checkbox:focus {
+  box-shadow: 0 0 0 2px black;
+}
+.checkbox[data-state='checked'] {
+  background: var(--backgroundUiElementHover);
+}
+.checkbox__indicator {
+  color: var(--background);
+}
+
+.checkbox__label {
+  color: var(--text);
+  line-height: 1;
+  font-size: 12px;
+font-weight: var(--bold);
+}

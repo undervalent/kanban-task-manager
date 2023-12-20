@@ -1,7 +1,7 @@
 import { cssBundleHref } from "@remix-run/css-bundle";
 import { json } from "@remix-run/node";
-import type { LinksFunction, DataFunctionArgs } from "@remix-run/node";
-import { useLoaderData } from "@remix-run/react";
+import type { LinksFunction, DataFunctionArgs, ActionFunctionArgs } from "@remix-run/node";
+import { useLoaderData , Outlet } from "@remix-run/react";
 import { invariantResponse } from "~/utils";
 import boardStylesUrl from "./board.css";
 import { EmptyBoard, links as emptyBoardLinks } from "./components/empty-board";
@@ -10,8 +10,10 @@ import {
   KanBanBoard,
   links as kanbanBoardLinks,
 } from "./components/kanban-board";
-
 import prisma from "prisma/client";
+
+import { prefs } from "./components/kanban-board/cookie";
+import { getColumnNames } from "./components/kanban-board/utils";
 
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
@@ -19,25 +21,39 @@ export const links: LinksFunction = () => [
   ...emptyBoardLinks(),
   ...kanbanBoardLinks(),
 ];
-export async function loader({ params }: DataFunctionArgs) {
+export async function action({ request }: ActionFunctionArgs) {
+  const cookieHeader = request.headers.get('Cookie');
+  const cookie = (await prefs.parse(cookieHeader)) || {};
+  console.log('COOKIE -->', cookie)
+  return json({});
+}
+export async function loader({ params, request }: DataFunctionArgs) {
+  const cookieHeader = request.headers.get('Cookie');
+  const cookie = (await prefs.parse(cookieHeader)) || {};
   const { boardId } = params;
 
-const board = await prisma.board.findUnique({
-  where: { id: boardId },
-  include: {
-    columns: {
-      include: {
-        task: {
-          include: {
-                subTask: true
+  const board = await prisma.board.findUnique({
+    where: { id: boardId },
+    include: {
+      columns: {
+        include: {
+          task: {
+            include: {
+              subTask: true
+            }
           }
         }
-      }
-    },
-  }
-})
+      },
+    }
+  })
   invariantResponse(board, "Board not found");
-  return json({ board, hasColumn: Boolean(board?.columns?.length) })
+  const columnNames = getColumnNames(board.columns)
+  cookie.columnNames = columnNames;
+  return json({ board, hasColumn: Boolean(board?.columns?.length) }, {
+    headers: {
+      "Set-Cookie": await prefs.serialize(cookie)
+    }
+  })
 }
 
 
@@ -52,6 +68,7 @@ export default function Board() {
       <article className="content">
         {hasColumn ? <KanBanBoard board={board} /> : <EmptyBoard />}
       </article>
+      <Outlet />
     </section>
   );
 }
