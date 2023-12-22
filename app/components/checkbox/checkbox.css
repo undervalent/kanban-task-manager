@@ -3,25 +3,24 @@
   width: 100%;
   padding: 1.3rem 1.6rem;
   align-items: center;
-  background-color: var(--backgroundUiElement);
+  background-color: var(--UiElementBackground);
   gap: 1rem;
+  border-radius: .4rem;
+  &:has(.checkbox__label:hover) {
+    background-color: var(--UiElementBackgroundHover);
+  }
 }
 
+
 .checkbox {
-  background-color: white;
-  width: 25px;
-  height: 25px;
-  border-radius: 4px;
+  background-color: var(--backgroundApp);
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 0.4rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  /* box-shadow: 0 2px 10px var(--black-a7); */
-}
-.checkbox:hover {
-  background-color: var(--backgroundUiElementHover);
-}
-.checkbox:focus {
-  box-shadow: 0 0 0 2px black;
+  border: 1px solid hsla(216, 15%, 57%, 0.25);
 }
 .checkbox[data-state='checked'] {
   background: var(--backgroundUiElementHover);
@@ -34,5 +33,18 @@
   color: var(--text);
   line-height: 1;
   font-size: 12px;
-font-weight: var(--bold);
+  font-weight: var(--bold);
+  cursor: pointer;
+}
+
+.checkbox__label {
+  color: var(--text);
+  line-height: 1;
+  font-size: 12px;
+  font-weight: var(--bold);
+  cursor: pointer;
+}
+.checkbox__label.completed {
+ color: var(--grayText);
+ text-decoration: line-through;
 }

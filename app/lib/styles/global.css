@@ -613,12 +613,15 @@ html {
   --backgroundApp: hsla(0, 0%, 100%, 1);
   --text: hsla(237, 100%, 4%, 1);
   --backgroundUiElement: hsla(220, 69%, 97%, 1);
-  --backgroundUiElementHover: hsla(242, 48%, 58%, 1);
+  --backgroundUiElementHover: hsla(242, 48%, 58%, .6);
   --textLowContrast: hsla(237, 100%, 4%, 1);
   --buttonSecondaryBackground: hsla(242, 48%, 58%, 0.1);
   --buttonSecondaryBackgroundHover: hsla(242, 48%, 58%, 0.25);
   --buttonSecondaryText: hsla(242, 48%, 58%, 1);
   --grayText: hsla(216, 15%, 57%, 1);
+  --UiElementBackground: hsla(220, 69%, 97%, 1);
+  --UiElementBackgroundHover: hsla(242, 48%, 58%, .25);
+
   background: var(--background);
   color: var(--text);
 }

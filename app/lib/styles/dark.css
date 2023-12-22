@@ -7,4 +7,5 @@ html {
   --textLowContrast: hsla(0, 0%, 100%, 0.25);
   --buttonSecondaryBackground: hsla(0, 0%, 100%, 1);
   --buttonSecondaryBackgroundHover: hsla(0, 0%, 100%, 1);
+  --UiElementBackground: hsla(235, 16%, 15%, 1);
 }

@@ -33,7 +33,7 @@ export function Card({ task }: Props) {
   const [{ completed, total, attributes, listeners, setNodeRef }, { style }] = useCardData(task)
 
   return (
-    <li className="container" ref={setNodeRef} {...listeners} {...attributes}>
+    <li ref={setNodeRef} {...listeners} {...attributes}>
       <Link to={task.id} className="card" style={style}>
         <h3 className="card__title">{task.title}</h3>
         <p className="card__description">{completed} of {total} subtasks</p>

@@ -11,6 +11,8 @@ import * as Dialog from '@radix-ui/react-dialog';
 import dialogStylesUrl from './dialog.css'
 import { getCompletedSubTaskCount } from '~/lib/utils';
 import { DropDown } from '~/components/drop-down';
+import { Button } from '~/components/button';
+
 export const links: LinksFunction = () => [
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
   { rel: "stylesheet", href: dialogStylesUrl }
@@ -61,7 +63,7 @@ export default function Task() {
           <DropDown values={columnNames} label="Current Status" />
           <div style={{ display: 'flex', marginTop: 25, justifyContent: 'flex-end' }}>
             <Dialog.Close asChild>
-              <button className="Button green">Save changes</button>
+              <Button>Save changes</Button>
             </Dialog.Close>
             </div>
           </Form>
